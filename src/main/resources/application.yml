@@ -1,0 +1,63 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: Support bot
+  mvc:
+    servlet:
+      path: /supportbot
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # show-sql: @jpa.show.sql@
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          batch_size: 50
+          time_zone: UTC
+          batch:
+            versioned: false
+          lob:
+            non_contextual_creation: true
+        order_inserts: true
+        order_updates: true
+    output:
+      ansi:
+        enabled: always
+
+server:
+  port: 8080
+
+asana:
+  token: "2/1209378764634369/1209386664849549:ba14bfd4b13f2d48d01dc386bdca79db"
+  url: "https://app.asana.com/api/1.0"
+  workspace-id: "1203611204418108"
+  project-id: "1209269161730390"
+
+telegram:
+  #      username: Parqour_Support_bot
+  #      token: 6016001959:AAE1SuQCLapZBnHZYT5iYoSmKUQ3S9fMGBA
+  username: task_manager_bot
+  token: 7331856720:AAE83rQZFne7AQkAb1raLXgsr2u6x2Xlzlc
+
+
+logging:
+  level:
+    org.springframework: info
+  logback:
+    rollingpolicy:
+      max-file-size: 500MB
+  file:
+    name: logs.log
