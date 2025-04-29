@@ -1,11 +1,17 @@
-### Java Spring template project
+# Сервис для Автоматизации задач
 
-This project is based on a GitLab [Project Template](https://docs.gitlab.com/ee/gitlab-basics/create-project.html).
+Это Telegram-бот поддержки, разработанный на Java с использованием Spring Boot.  
+Бот обрабатывает входящие сообщения, команды и webhook-запросы от Telegram, а также взаимодействует с внутренними системами (матчинг, базы данных и др.).
 
-Improvements can be proposed in the [original project](https://gitlab.com/gitlab-org/project-templates/spring).
+## 📦 Стек технологий
 
-### CI/CD with Auto DevOps
+- Java 17+
+- Spring Boot
+- Maven
+- Telegram Bot API
+- Docker
+- GitLab CI/CD
+- Asana API
+- YourTrack
 
-This template is compatible with [Auto DevOps](https://docs.gitlab.com/ee/topics/autodevops/).
 
-If Auto DevOps is not already enabled for this project, you can [turn it on](https://docs.gitlab.com/ee/topics/autodevops/#enabling-auto-devops) in the project settings.
